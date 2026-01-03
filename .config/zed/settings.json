@@ -1,0 +1,69 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "context_servers": {
+    "mcp-server-context7": {
+      "enabled": true,
+      "settings": {
+        "context7_api_key": "ctx7sk-4f880f60-522a-4ff7-8ce5-dd37b634d554"
+      }
+    }
+  },
+  "agent": {
+    "inline_assistant_model": {
+      "provider": "openai",
+      "model": "gpt-5-mini"
+    },
+    "profiles": {
+      "huy": {
+        "name": "Huy",
+        "tools": {},
+        "enable_all_context_servers": false,
+        "context_servers": {}
+      }
+    },
+    "dock": "left",
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-5"
+    },
+    "always_allow_tool_actions": true,
+    "model_parameters": []
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "project_panel": {
+    "dock": "right"
+  },
+  "base_keymap": "VSCode",
+  "icon_theme": "Catppuccin Mocha",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Catppuccin Mocha"
+  },
+  "vim_mode": false,
+  // =========================
+  // Editor Behavior
+  // =========================
+  "autosave": {
+    "after_delay": { "milliseconds": 500 }
+  },
+  "format_on_save": "on",
+  "restore_on_startup": "last_session",
+  "show_completions_on_input": true,
+  "languages": {
+    "Python": {
+      "language_servers": ["ty", "!basedpyright", "pyright", "..."]
+    }
+  }
+}

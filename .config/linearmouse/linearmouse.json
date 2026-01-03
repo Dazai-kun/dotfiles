@@ -1,0 +1,38 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.2",
+  "schemes" : [
+    {
+      "buttons" : {
+        "universalBackForward" : true
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0x2222",
+          "productName" : "Gaming Mouse",
+          "vendorID" : "0x1a81"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0.902,
+        "disableAcceleration" : true,
+        "redirectsToScroll" : false,
+        "speed" : 0.0785
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "reverse" : {
+          "vertical" : true
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      }
+    }
+  ]
+}
