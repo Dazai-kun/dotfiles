@@ -89,9 +89,8 @@ let g:WhichKeyDesc_textobj_i_entire = "ig entire file"
 xmap ig <Plug>textobj-entire-i
 omap ig <Plug>textobj-entire-i
 
-
-
-
+Plug 'machakann/vim-highlightedyank'
+let g:highlightedyank_highlight_duration = "300"
 
 
 
