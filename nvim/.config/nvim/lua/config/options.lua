@@ -2,13 +2,16 @@
 -- See ":help vim.o"
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see ":help option-list"
-
+vim.opt.autoread = true
 vim.opt.autoindent = true
 vim.opt.smartindent = false
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
+
+vim.opt.updatetime = 300 -- Set to 300ms for snappier AI updates
+
 -- Make line numbers default
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.

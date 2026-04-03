@@ -9,6 +9,7 @@ return {
         'python',
         'bash',
         'json',
+        'html',
         'yaml',
         'toml',
         'sql',
