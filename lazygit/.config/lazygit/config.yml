@@ -3,9 +3,11 @@ os:
   open: "bash -c 'open {{filename}}'"
 git:
   overrideGpg: true
+  ignoreWhitespaceInDiffView: true
   pagers:
+    - colorArg: "never"
+      pager: ydiff -p cat -s --wrap --width={{columnWidth}}
     - pager: delta --paging=never # other configs in gitconfig
-      colorArg: always
 gui:
   expandFocusedSidePanel: true
   expandedSidePanelWeight: 99
@@ -15,8 +17,34 @@ gui:
   sidePanelWidth: 0.22
   showBottomLine: false
   theme:
+    activeBorderColor:
+      - '#f4dbd6'
+      - bold
+    inactiveBorderColor:
+      - '#a5adcb'
+    searchingActiveBorderColor:
+      - '#eed49f'
+    optionsTextColor:
+      - '#8aadf4'
     selectedLineBgColor:
-      - reverse
+      - '#363a4f'
+    inactiveViewSelectedLineBgColor:
+      - '#6e738d'
+    cherryPickedCommitFgColor:
+      - '#f4dbd6'
+    cherryPickedCommitBgColor:
+      - '#494d64'
+    markedBaseCommitFgColor:
+      - '#8aadf4'
+    markedBaseCommitBgColor:
+      - '#eed49f'
+    unstagedChangesColor:
+      - '#ed8796'
+    defaultFgColor:
+      - '#cad3f5'
+
+  authorColors:
+     '*': '#b7bdf8'
 notARepository: "quit"
 promptToReturnFromSubprocess: false
 keybinding:

@@ -1,5 +1,5 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.2",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.11.1",
   "schemes" : [
     {
       "buttons" : {
@@ -31,6 +31,37 @@
         },
         "speed" : {
           "vertical" : 0
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xf533",
+          "productName" : "Dragonfly 3 Master",
+          "vendorID" : "0x3554"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0x1a05",
+          "productName" : "Dragonfly 3 Master+",
+          "serialNumber" : "541505796617",
+          "vendorID" : "0x391d"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
         }
       }
     }

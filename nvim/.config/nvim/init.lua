@@ -221,6 +221,7 @@ require('lazy').setup({
         { '<leader>s', group = '[S]earch' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { 'gz', group = '[S]urround', mode = { 'n', 'x' } },
       },
     },
   },
@@ -284,10 +285,22 @@ require('lazy').setup({
 
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --
-      -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
-      -- - sd'   - [S]urround [D]elete [']quotes
-      -- - sr)'  - [S]urround [R]eplace [)] [']
-      require('mini.surround').setup()
+      -- - gzaiw) - Surround [A]dd [I]nner [W]ord [)]Paren
+      -- - gzd'   - Surround [D]elete [']quotes
+      -- - gzr)'  - Surround [R]eplace [)] [']
+      -- - select text, then gza" - add quotes around the selection
+      require('mini.surround').setup {
+        mappings = {
+          add = 'gza',
+          delete = 'gzd',
+          find = 'gzf',
+          find_left = 'gzF',
+          highlight = 'gzh',
+          replace = 'gzr',
+          suffix_last = 'l',
+          suffix_next = 'n',
+        },
+      }
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
