@@ -110,3 +110,24 @@ To remove the symlinks (and restore your previous config if you backed it up):
 cd ~/dotfiles
 stow -D -t ~ nvim tmux zsh ... # list the packages you want to unstow
 ```
+
+## OpenCode PostgreSQL Schema Tool
+
+This repository includes a reusable OpenCode PostgreSQL schema-inspection tool under `opencode/.config/opencode/`.
+
+Install or refresh it with:
+
+```bash
+cd /Users/ngogiahuy/dotfiles
+stow --restow --target="$HOME" opencode
+```
+
+Verify the global files:
+
+```bash
+ls -l ~/.config/opencode/plugins/postgres-schema.ts
+ls -l ~/.config/opencode/skills/postgres-schema/SKILL.md
+ls -l ~/.config/opencode/postgres-schema/pyproject.toml
+```
+
+Restart OpenCode after changing plugins or skills. The global implementation is generic; each ETL repository must provide its own `.opencode/postgres-schema.json` policy and credentials through the configured connection environment variables.
