@@ -130,8 +130,8 @@ run = 'move-node-to-workspace G'
     inner.horizontal = 15
     inner.vertical =   15
     outer.left =       [{ monitor."DELL S2319H" = 25 }, {monitor."Built-in Display" = 15}, { monitor."VA2409-FHD" = 20 }, 15 ]
-    outer.bottom =     [{monitor."DELL S2319H" = 20 }, {monitor."Built-in Display" = 15}, { monitor."VA2409-FHD" = 20 }, 15 ]
-    outer.top =        [{monitor."DELL S2319H" = 35 }, {monitor."Built-in Display" = 15}, { monitor."VA2409-FHD" = 35 }, 15 ]
+    outer.bottom =     [{monitor."DELL S2319H" = 20 }, {monitor."Built-in Display" = 15}, { monitor."VA2409-FHD" = 20 }, 20 ]
+    outer.top =        [{monitor."DELL S2319H" = 35 }, {monitor."Built-in Display" = 15}, { monitor."VA2409-FHD" = 35 }, 35 ]
     outer.right =      [{monitor."DELL S2319H" = 25 }, {monitor."Built-in Display" = 15}, { monitor."VA2409-FHD" = 20 }, 15 ]
 
 # 'main' binding mode declaration

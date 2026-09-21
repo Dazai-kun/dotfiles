@@ -113,11 +113,14 @@ stow -D -t ~ nvim tmux zsh ... # list the packages you want to unstow
 
 ## OpenCode PostgreSQL Schema Tool
 
-This repository includes a reusable OpenCode PostgreSQL schema-inspection tool under `opencode/.config/opencode/`.
+This repository includes a reusable OpenCode PostgreSQL schema-inspection tool under `opencode/.config/opencode/`. It is
+defined as a native OpenCode v2 plugin (`.opencode/plugins/postgres-schema.ts`) that registers the `postgres_schema` tool
+with `ctx.tool.transform`, and depends on the `@opencode/plugin` package.
 
 Install or refresh it with:
 
 ```bash
+cd /Users/ngogiahuy/dotfiles/opencode/.config/opencode && bun install
 cd /Users/ngogiahuy/dotfiles
 stow --restow --target="$HOME" opencode
 ```
@@ -128,6 +131,7 @@ Verify the global files:
 ls -l ~/.config/opencode/plugins/postgres-schema.ts
 ls -l ~/.config/opencode/skills/postgres-schema/SKILL.md
 ls -l ~/.config/opencode/postgres-schema/pyproject.toml
+ls -l ~/.config/opencode/node_modules/@opencode/plugin
 ```
 
 Restart OpenCode after changing plugins or skills. The global implementation is generic; each ETL repository must provide its own `.opencode/postgres-schema.json` policy and credentials through the configured connection environment variables.

@@ -7,11 +7,25 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "language_models": {
+    "opencode": {
+      "show_zen_models": false
+    }
+  },
+  "edit_predictions": {
+    "open_ai_compatible_api": {
+      "api_url": "",
+      "model": ""
+    },
+    "allow_data_collection": "no"
+  },
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "right"
   },
   "git_panel": {
-    "dock": "left"
+    "group_by": "status",
+    "tree_view": true,
+    "dock": "right"
   },
   "context_servers": {
     "mcp-server-context7": {
@@ -22,6 +36,12 @@
     }
   },
   "agent": {
+    "sidebar_side": "right",
+    "play_sound_when_agent_done": "when_hidden",
+    "default_profile": "ask",
+    "tool_permissions": {
+      "default": "allow"
+    },
     "inline_assistant_model": {
       "provider": "openai",
       "model": "gpt-5-mini"
@@ -36,10 +56,11 @@
     },
     "dock": "left",
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-5"
+      "effort": "max",
+      "enable_thinking": true,
+      "provider": "opencode",
+      "model": "go/deepseek-v4-flash"
     },
-    "always_allow_tool_actions": true,
     "model_parameters": []
   },
   "outline_panel": {
@@ -57,13 +78,11 @@
     "light": "One Light",
     "dark": "Catppuccin Mocha"
   },
-  "vim_mode": false,
+  "vim_mode": true,
   // =========================
   // Editor Behavior
   // =========================
-  "autosave": {
-    "after_delay": { "milliseconds": 500 }
-  },
+  "autosave": "off",
   "format_on_save": "on",
   "restore_on_startup": "last_session",
   "show_completions_on_input": true,
@@ -71,5 +90,5 @@
     "Python": {
       "language_servers": ["ty", "!basedpyright", "pyright", "..."]
     }
-  }
+  },
 }

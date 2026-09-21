@@ -1,5 +1,15 @@
 {
   "dependencies": {
-    "@opencode-ai/plugin": "1.4.7"
+    "@opencode/plugin": "^2.0.11"
+  },
+  "name": "opencode",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
   }
 }

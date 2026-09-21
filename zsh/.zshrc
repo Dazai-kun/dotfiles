@@ -11,6 +11,9 @@ export VISUAL=nvim
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME=""
 
+
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -172,3 +175,10 @@ export PATH=$PATH:$HOME/.local/opt/go/bin
 
 # opencode
 export PATH=/Users/ngogiahuy/.opencode/bin:$PATH
+
+# bun completions
+[ -s "/Users/ngogiahuy/.bun/_bun" ] && source "/Users/ngogiahuy/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

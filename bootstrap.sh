@@ -34,7 +34,8 @@ stow -t "$HOME" \
   yazi \
   starship \
   lazygit \
-  zed
+  zed \
+  opencode
 
 # macOS-only packages
 if [[ "$OSTYPE" == "darwin"* ]]; then
